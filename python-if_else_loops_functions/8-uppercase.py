@@ -1,9 +1,10 @@
-#!/usr/bin/python3
 def uppercase(str):
-    text = ""
-    for i in range(len(str)):
-        if ord(str[i]) >= ord("a") and ord(str[i]) <= ord("z"):
-            print(chr(ord(str[i]) - 32), end="")
+    result = ""
+    for c in str:
+        # Check if character is lowercase a–z
+        if ord('a') <= ord(c) <= ord('z'):
+            # Convert to uppercase by subtracting 32
+            result += chr(ord(c) - 32)
         else:
-            print(str[i], end="")
-    print("")
+            result += c
+    print("{}".format(result))
