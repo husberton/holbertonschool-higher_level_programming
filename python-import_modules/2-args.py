@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 from sys import argv
 if __name__ == "__main__":
-    if len(argv) == 0:
+    argc = len(argv) - 1
+    if argc == 0:
         print("0 arguments.")
-    elif len(argv) == 1:
+    elif argc == 1:
         print("1 argument:")
         print("{}".format(argv[1]))
     else:
