@@ -51,8 +51,10 @@ class Rectangle:
         h = self.__height
         if h == 0 or w == 0:
             return ""
+        rows = []
         for row in range(h):
-            print(w * "#")
+            rows.append(w * "#")
+        return "/n".join(rows)
 
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
