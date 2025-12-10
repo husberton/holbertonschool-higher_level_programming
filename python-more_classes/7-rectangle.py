@@ -56,7 +56,7 @@ class Rectangle:
             return ""
         rows = []
         for row in range(h):
-            rows.append(w * self.print_symbol)
+            rows.append(w * str(self.print_symbol))
         return "\n".join(rows)
 
     def __repr__(self):
