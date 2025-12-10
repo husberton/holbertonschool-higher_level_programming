@@ -1,20 +1,24 @@
 #!/usr/bin/python3
-""" This is a class names Rectangle """
+"""Defines a Rectangle class."""
 
 
 class Rectangle:
-    """ It has the following attributes and methods """
+    """Represents a rectangle."""
+
     def __init__(self, width=0, height=0):
+        """Initialize the rectangle."""
         self.width = width
         self.height = height
 
     @property
     def width(self):
+        """Retrieve the width."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        if not isintance(value, int):
+        """Set width with validation."""
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
@@ -22,10 +26,12 @@ class Rectangle:
 
     @property
     def height(self):
+        """Retrieve the height."""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """Set height with validation."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
