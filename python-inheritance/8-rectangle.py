@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-import BaseGeometry
 """ Do inheritance """
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
     def __init__(self, width, height):
-        if integer_validator(width):
-            self.width = width
-        if integer_validator(height):
-            self.height = height
+        integer_validator("width", width)
+        self.width = width
+        integer_validator("width", height)
+        self.height = height
