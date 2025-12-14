@@ -14,4 +14,4 @@ class Square(Rectangle):
 
     def __str__(self):
         super().__init__(self.__size, self.__size)
-        super().__str__()
+        str(self)
