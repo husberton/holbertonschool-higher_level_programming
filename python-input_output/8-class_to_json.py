@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ jhhh """
-import json
 
 
 def class_to_json(obj):
@@ -9,4 +8,4 @@ def class_to_json(obj):
     for attr in dir(obj):
         if attr in [list, dict, str, int, bool]:
             serialized[attr] = obj.attr
-    return json.dumps(serialized)
+    return str(serialized)
